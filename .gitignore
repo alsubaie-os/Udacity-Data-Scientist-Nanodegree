@@ -8,3 +8,4 @@ gen
 .ipynb_checkpoints
 __pycache__
 *.db
+*.pkl
