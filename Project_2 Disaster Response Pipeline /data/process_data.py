@@ -50,6 +50,9 @@ def clean_data(df):
         # convert column from string to numeric
         categories[column] = categories[column].astype(int)
 
+    # replace 2s with 1s in related column
+    categories['related'] = categories['related'].replace(to_replace=2, value=1)
+
     # drop the original categories column from `df`
     df.drop('categories', axis=1, inplace=True)
 
@@ -106,4 +109,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-#%%
+# %%
